@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon,Button } from 'antd';
 import { Link } from 'react-router-dom';
 
 import './style.css';
@@ -10,12 +10,18 @@ const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
 class Frame extends Component {
-    state = {
-        collapsed: false,
-    };
+    constructor(props) {
+        super(props);
+        this.state={
+            collapsed: false,
+        };
+    }
     onCollapse = (collapsed) => {
         console.log(collapsed);
         this.setState({ collapsed });
+    }
+    outLogin(){
+
     }
     render() {
         return (
@@ -65,7 +71,9 @@ class Frame extends Component {
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header style={{ padding: 0 }} />
+                    <Header style={{ padding: 0 }}>
+                        <Button type="primary" onClick={this.outLogin.bind(this)}>退出</Button>
+                    </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <RouterPage/>
                     </Content>

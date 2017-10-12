@@ -24,7 +24,7 @@ class NormalLoginForm extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <div className="login-content">
-                <h1>姜琪react-demo管理系统</h1>
+                <h1>华彬绩效考核管理系统</h1>
                 <Form onSubmit={this.handleSubmit} className="login-form">
                     <FormItem>
                         {getFieldDecorator('userName', {
